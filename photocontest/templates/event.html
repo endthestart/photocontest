@@ -1,0 +1,14 @@
+{% extends 'skeleton_base.html' %}
+{% load jfutags %}
+{% block title %}Upload{% endblock %}
+{% block content %}
+    <div class="six columns offset-by-five">
+        <p>
+            Please select the event where the photos were taken.
+        </p>
+        <form action="" method="post">{% csrf_token %}
+            {{ form }}
+            <input type="submit" name="next" />
+        </form>
+    </div>
+{% endblock %}

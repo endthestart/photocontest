@@ -1,0 +1,14 @@
+{% extends 'skeleton_base.html' %}
+{% load jfutags %}
+{% block title %}Upload{% endblock %}
+{% block content %}
+    <div class="six columns offset-by-five">
+        <p>
+            To start the process, please enter your information below. This information is used for the copyright of the photos and also to identify the winners for each event.
+        </p>
+        <form action="" method="post">{% csrf_token %}
+            {{ form }}
+            <input type="submit" name="next" value="Next" />
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'skeleton_base.html' %}
+{% load jfutags %}
+{% block title %}Upload{% endblock %}
+{% block content %}
+<h1 class="title">Photo Contest Upload</h1>
+
+<div class="container">
+<div class="six columns">
+<h3>Event Information</h3>
+<p>You are currently uploading photos for: <span style="font-weight: bold;">{{ event }}</span></p>
+<p><a href="{% url 'event' %}">Change</a></p>
+</div>
+<div class="six columns">
+<h3>Contact Information</h3>
+    {{ profile.full_name }}<br />
+    {{ profile.email }}<br />
+    {{ profile.phone }}<br />
+    <p><a href="{% url 'profile' %}">Change</a></p>
+</div>
+<div class="six columns">
+<h3>Copyright Information</h3>
+    {{ profile.copyright }}
+    <p><a href="{% url 'profile' %}">Change</a></p>
+</div>
+</div>
+<div class="entry">
+    <h2>Upload your photos!</h2>
+{% jfu %}
+</div>
+{% endblock %}
