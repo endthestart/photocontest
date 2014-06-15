@@ -243,11 +243,6 @@ ol ol li, ol ul li {
     margin-bottom: 6px;
 }
 
-li {
-    line-height: 10px;
-    margin-bottom: 6px;
-}
-
 ul.large li {
     line-height: 21px;
 }
