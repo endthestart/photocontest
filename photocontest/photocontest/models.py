@@ -64,8 +64,10 @@ class Event(models.Model):
         blank=True,
         null=True,
     )
-    date = models.DateField(
+    event_date = models.DateField(
         _("date"),
+        blank=True,
+        null=True,
     )
 
     def save(self, **kwargs):

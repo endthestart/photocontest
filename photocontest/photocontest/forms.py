@@ -1,9 +1,11 @@
+import datetime
+
 from django import forms
 from .models import Profile, Event
 
 
 class EventForm(forms.Form):
-    event = forms.ModelChoiceField(queryset=Event.objects.all())
+    event = forms.ModelChoiceField(queryset=Event.objects.filter(event_date__lte=datetime.datetime.today()))
 
 
 class ProfileForm(forms.ModelForm):
